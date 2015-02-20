@@ -1,0 +1,73 @@
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+.item:not(.prev) {visibility: visible;}
+.item.right:not(.prev) {visibility: hidden;}
+.rightest{ visibility: visible;}
+
+a:link { color: white; text-decoration: none }
+a:active { color: red; text-decoration: none }
+a:visited { color: yellow; text-decoration: none }
+a:hover { color: green; text-decoration: underline }
+body {
+    background-image: url("http://cop4813.ccec.unf.edu/~n00153260/cop4819/img/vector.png");
+    background-repeat: repeat-y;
+}
+body { 
+
+margin-top: 5px; 
+margin-right: 10px; 
+margin-bottom: 15px; 
+margin-left: 20px; 
+color:white;
+}
+label {
+display: inline-block;
+margin-bottom: 5px;
+font-weight: bold;
+font-color:white;
+}
+
+h1 {
+    color:white;
+    font-family:verdana;
+    font-size:200%;
+}
+h3 {
+    color:white;
+    font-family:verdana;
+    font-size:200%;
+}
+
+p  {
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    text-indent: 50px;
+    color:white;
+    font-family:courier;
+    font-size:100%;
+}
+hr {
+
+
+height: 4px;
+width: 75%;
+border: 1px solid #FF0000;
+}
+
+ul {
+    list-style: square outside none;
+}
+li{
+	color: black;
+}
+table, th, td {
+    border: 1px;
+    
+}
+p {
+    text-indent: 50px;
+}
