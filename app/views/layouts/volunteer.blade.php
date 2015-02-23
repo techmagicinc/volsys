@@ -41,7 +41,11 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/NewProfile">New User Registration</a></li>
+<<<<<<< HEAD
                                 <li><a href="/ContactForm">Contact Administrator</a></li>
+=======
+                                <li><a href="contactform.html">Contact Administrator</a></li>
+>>>>>>> origin/master
 
                                 <!-- <li class="divider"></li>
                                 <li><a href="#">Separated link</a></li>
