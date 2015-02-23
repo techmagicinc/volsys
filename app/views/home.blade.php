@@ -18,7 +18,6 @@
         <br>
         <div>{{Form::submit('Login')}}</div>
         <br>
-        <a href="/SignIn">Volunteer Sign in</a>
     </section>
 
     {{Form::close()}}

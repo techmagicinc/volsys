@@ -16,9 +16,13 @@ Route::get('/', function() {
 });
 
 Route::get('SignIn', function() {
-    return View::make('pages.signIn');
+    return View::make('pages.signin');
 });
 
 Route::get('NewProfile', function() {
-    return View::make('pages.newProfile');
+    return View::make('pages.newprofile');
+});
+
+Route::get('ContactForm', function() {
+    return View::make('pages.contactform');
 });
