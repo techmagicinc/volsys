@@ -26,3 +26,7 @@ Route::get('NewProfile', function() {
 Route::get('ContactForm', function() {
     return View::make('pages.contactform');
 });
+
+Route::resource('Mail', 'MailController');
+
+
