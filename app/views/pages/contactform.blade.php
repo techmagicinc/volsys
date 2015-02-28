@@ -3,20 +3,17 @@
 @section('body')
 
     {{Form::open(['route' => 'Mail.store'])}}
-        <table>
+        <table align="center">
             <tr>
-                <td align = "right">
+                <td align = "left">
 
                     {{Form::label('vName', 'Volunteer: ')}}
-                </td>
-                <td align = "right">
+
                     {{Form::text('vName')}}
 
                 </td>
             </tr>
-        </table>
-        <br>
-       <table>
+
             <tr>
                 <td>
                     {{Form::label('message','Message to admin')}}
