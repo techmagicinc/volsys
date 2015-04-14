@@ -12,7 +12,7 @@ class VolinfoM extends Migration {
 	 */
     public function up()
     {
-        Schema::create('volinfo', function($newtable)
+        Schema::create('volunteers', function($newtable)
         {
             $newtable->increments('id');
             $newtable->string('fname');

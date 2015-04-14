@@ -12,12 +12,12 @@ class Timestamp extends Migration {
 	 */
     public function up()
     {
-        Schema::create('timestamp', function($newtable)
+        Schema::create('timestamps', function($newtable)
         {
             $newtable->increments('id');
-            $newtable->timestamp('sign in');
-            $newtable->timestamp('sign out');
-            $newtable->string('flag');
+            $newtable->timestamp('signin');
+            $newtable->timestamp('signout');
+            $newtable->boolean('flag')->default(1);
             $newtable->timestamps();
 
         });

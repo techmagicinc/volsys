@@ -1,22 +1,19 @@
 <?php
 
-class login extends Eloquent{
+class mail extends Eloquent{
 
-    public $timestamps = false;
 
-    protected $fillable = ['username', 'password'];
+    protected $fillable = ['volunteer name', 'message'];
 
     public $messages;
 
-
     public static $rules = [
-
-        'username' => 'required',
-        'password' => 'required'
-
+        'volunteer name' => 'required',
+        'message' => 'required'
     ];
 
-    public function isValid(){
+    public function isValid()
+    {
 
         $validation = Validator::make($this->attributes, static::$rules);
 
@@ -24,8 +21,9 @@ class login extends Eloquent{
             return true;
 
         $this->messages = $validation->messages();
-            return false;
+        return false;
 
     }
 
 }
+

@@ -35,14 +35,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/SignIn">Volunteer Sign In<span class="sr-only">(current)</span></a></li>
-                        <li><a href="/">Admin Login</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Volunteer Services <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="/NewProfile">New User Registration</a></li>
-
-                                <li><a href="/ContactForm">Contact Administrator</a></li>
+                        <li class="active"><a href="/">Volunteer Sign In<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/NewProfile">New User Registration</a></li>
+                        <li><a href="/ContactForm">Contact Administrator</a></li>
+                        <li>{{ HTML:: link('login','Admin Login') }}</li>
 
                                 <!-- <li class="divider"></li>
                                 <li><a href="#">Separated link</a></li>

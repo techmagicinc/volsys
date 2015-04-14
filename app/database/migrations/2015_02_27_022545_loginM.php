@@ -12,7 +12,7 @@ class LoginM extends Migration {
 	 */
     public function up()
     {
-        Schema::create('login', function($newtable)
+        Schema::create('logins', function($newtable)
         {
             $newtable->increments('id');
             $newtable->string('username');

@@ -2,14 +2,17 @@
 
 @section('body')
 
-    {{Form::open(['route' => 'Mail.store'])}}
+    {{Form::open(['route' => 'Mail.store'])}} &nbsp; &nbsp; {{$errors->first('message')}}
+    {{$errors->first('volunteer name')}}
         <table align="center">
             <tr>
                 <td align = "left">
 
                     {{Form::label('vName', 'Volunteer: ')}}
 
-                    {{Form::text('vName')}}
+                    {{Form::text('volunteer name')}}
+
+
 
                 </td>
             </tr>
@@ -22,6 +25,7 @@
             <tr>
                 <td>
                     {{Form::textarea('message')}}
+
                 </td>
 
             </tr>
@@ -34,5 +38,5 @@
         </table>
 
     {{Form::close()}}
-
+ NEED TO FIX THE TEXT FIELD ALWAYS NOT VALIDATING
 @stop

@@ -27,6 +27,31 @@ Route::get('ContactForm', function() {
     return View::make('pages.contactform');
 });
 
+Route::get('Maintenance', function() {
+    return View::make('pages.maintenance');
+});
+
 Route::resource('Mail', 'MailController');
 
+Route::resource('edittime', 'edittimecontroller');
+
+Route::get('EditTime', function() {
+    return View::make('pages.edittime');
+});
+
+
+Route::get('Login','admincontroller@create');
+Route::get('Logout', 'admincontroller@destroy');
+Route::resource('admin','admincontroller');
+
+
+Route::get('Maintenance', 'maintenancecontroller@index');
+array( 'before' => 'auth' ,
+
+Route::resource('edit','maintenancecontroller'));
+
+Route::post('search', array('before'=>'csrf', 'uses'=>'maintenancecontroller@search'));
+Route::get('results/(:all)', array('uses'=>'maintenancecontroller@results'));
+
+Route::resource('Volunteer', 'volunteercontroller');
 
