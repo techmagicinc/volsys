@@ -2,26 +2,93 @@
 
 class edittimecontroller extends \BaseController {
 
-    //   $email ;
-    //   $volunteer ;
+    public $restful = true;
 
-    public function store()
+    public function __construct(timestamp $time)
     {
-
-        $time = new timestamp;
-        $time->signin = Input::get('addtimein' + 'addtimeinM');
-        $time->signout = Input::get('addtimeout');
-
-        $time-> save();
-
-        return Redirect::to('/SignIn');
-
+        $this->timestamp = $time;
     }
 
-    public function edittime()
-    {
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		$times = $this->timestamp->all();
+        return View::make('pages.edittime',['times'=> $times]);
+	}
 
 
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		//
+	}
 
-    }
+
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		//
+	}
+
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		//
+	}
+
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		//
+	}
+
+
 }

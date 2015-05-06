@@ -15,6 +15,11 @@ Route::get('/', function() {
 	return View::make('home');
 });
 
+//Route::get('/', [
+  //  'as' => 'home',
+  //  'uses' => 'PagesController@home'
+//]);
+
 Route::get('SignIn', function() {
     return View::make('pages.signin');
 });
@@ -35,14 +40,26 @@ Route::resource('Mail', 'MailController');
 
 Route::resource('edittime', 'edittimecontroller');
 
-Route::get('EditTime', function() {
-    return View::make('pages.edittime');
-});
-
 
 Route::get('Login','admincontroller@create');
-Route::get('Logout', 'admincontroller@destroy');
+//Route::get('Logout', 'admincontroller@destroy');
+
+Route::get('Logout', [
+    'as' => 'logout_path',
+    'uses' => 'SessionsController@destroy'
+]);
+
 Route::resource('admin','admincontroller');
+
+Route::get('adminlogin', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@create'
+]);
+
+Route::post('adminlogin', [
+    'as' => 'login_path',
+    'uses' => 'SessionsController@store'
+]);
 
 
 Route::get('Maintenance', 'maintenancecontroller@index');
@@ -55,3 +72,32 @@ Route::get('results/(:all)', array('uses'=>'maintenancecontroller@results'));
 
 Route::resource('Volunteer', 'volunteercontroller');
 
+/*
+ * Registration
+ */
+Route::get('register', [
+    'as' => 'register_path',
+    'uses' => 'RegistrationController@create'
+]);
+
+Route::post('register', [
+    'as' => 'register_path',
+    'uses' => 'RegistrationController@store'
+]);
+
+/**
+ * hidden admin registration
+ */
+Route::get('adminregistration', [
+    'as' => 'adminregistration_path',
+    'uses' => 'AdminRegistrationController@create'
+]);
+
+Route::post('adminregistration', [
+    'as' => 'adminregistration_path',
+    'uses' => 'AdminRegistrationController@store'
+]);
+
+Route::get('Construction', function() {
+    return View::make('pages.construction');
+});

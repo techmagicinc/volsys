@@ -34,10 +34,11 @@
 <table>
     <tr>
         <td>
-        Yesterday's volunteers
-
-
-        [results with create]
+        <ul>
+        @foreach($vols as $vol)
+            <li>{{link_to("/edit/{$vol->id}", $vol->fname, array($vol->id)) }}</li>
+        @endforeach
+        </ul>
         </td>
     </tr>
 

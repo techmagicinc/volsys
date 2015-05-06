@@ -2,6 +2,13 @@
 
 class maintenancecontroller extends \BaseController {
 
+    public $restful=true;
+
+    public function __construct(volunteer $vol)
+    {
+        $this-> volunteer = $vol;
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +16,8 @@ class maintenancecontroller extends \BaseController {
 	 */
 	public function index()
 	{
-        return View::make('pages.maintenance');
+        $vols = $this->volunteer->all();
+        return View::make('pages.maintenance',['vols' => $vols]);
 	}
 
 
@@ -49,7 +57,8 @@ class maintenancecontroller extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$vol = $this->volunteer->find($id);
+        return View::make('pages.volunteer', ['vol' => $vol]);
 	}
 
 

@@ -35,10 +35,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Volunteer Sign In<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/">Volunteer Sign In</a></li>
                         <li><a href="/NewProfile">New User Registration</a></li>
                         <li><a href="/ContactForm">Contact Administrator</a></li>
-                        <li>{{ HTML:: link('login','Admin Login') }}</li>
+                        <li>{{ HTML:: link('Login','Admin Login') }}</li>
 
                                 <!-- <li class="divider"></li>
                                 <li><a href="#">Separated link</a></li>

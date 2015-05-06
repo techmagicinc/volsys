@@ -1,5 +1,6 @@
 <?php
 
+
 use seniorproject\Forms\SignInForm;
 
 class SessionsController extends \BaseController {
@@ -53,8 +54,8 @@ class SessionsController extends \BaseController {
      */
     public function destroy() {
         Auth::logout();
+        return View::make('pages.login');
 
-        return Redirect::home();
         Flash::message('You have been logged out!');
     }
 
