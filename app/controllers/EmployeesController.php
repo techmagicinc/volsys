@@ -151,7 +151,6 @@ public function getAuthPassword()
         $employeeId = Input::get('userid');
         $action = Input::get('action');
         $reasonLeave = Input::get('reason');
-       
         $timeIn = date_create()->format('Y-m-d H:i:s');  
         $data = array();
 

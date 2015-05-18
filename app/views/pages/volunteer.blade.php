@@ -16,11 +16,11 @@
             <tr>
                 <td>
                     {{Form::label('fName', 'First Name: ')}}
-                    {{Form::text('first name',$vol->fname)}}
+                    {{Form::text('first name',$emp->firstname)}}
                 </td>
                 <td>
                     {{Form::label('lName', 'Last Name: ')}}
-                    {{Form::text('last name', $vol->lname)}}
+                    {{Form::text('last name', $emp->lastname)}}
                 </td>
                 <td>
                     {{Form::label('category', 'Category: ')}}

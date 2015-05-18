@@ -35,8 +35,8 @@
     <tr>
         <td>
         <ul>
-        @foreach($vols as $vol)
-            <li>{{link_to("/edit/{$vol->id}", $vol->fname, array($vol->id)) }}</li>
+        @foreach($emps as $emp)
+            <li>{{link_to("/edit/{$emp->id}", $emp->firstname, array($emp->id)) }}</li>
         @endforeach
         </ul>
         </td>

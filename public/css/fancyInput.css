@@ -17,9 +17,9 @@
 	.fancyInput.textarea > div{ width:99.9%%; }
 
 	.fancyInput *:focus ~ .caret,
-	.fancyInput *:focus ~ div .caret{ opacity:.8; box-shadow:0 0 8px #FFF; -webkit-animation:0.4s 40ms caret infinite; animation:0.4s 40ms caret infinite; }
+	.fancyInput *:focus ~ div .caret{ opacity:.8; box-shadow:0 0 8px #000000; -webkit-animation:0.4s 40ms caret infinite; animation:0.4s 40ms caret infinite; }
 	.fancyInput .caret:only-child{  }
-	.fancyInput .caret{ font-weight:normal; opacity:0; display:inline-block; width:3px; margin-left:-3px; background:#FFF; border-radius:4px; -moz-user-select:none; }
+	.fancyInput .caret{ font-weight:normal; opacity:0; display:inline-block; width:3px; margin-left:-3px; background:#000000; border-radius:4px; -moz-user-select:none; }
 	.fancyInput span:not(.deleted) ~ .caret{ position:absolute; margin:0; } /* only Caret which is  */
 
 		/* lettes */

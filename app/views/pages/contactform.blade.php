@@ -38,5 +38,4 @@
         </table>
 
     {{Form::close()}}
- NEED TO FIX THE TEXT FIELD ALWAYS NOT VALIDATING
 @stop

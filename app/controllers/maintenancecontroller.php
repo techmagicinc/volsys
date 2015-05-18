@@ -4,9 +4,9 @@ class maintenancecontroller extends \BaseController {
 
     public $restful=true;
 
-    public function __construct(volunteer $vol)
+    public function __construct(employee $emp)
     {
-        $this-> volunteer = $vol;
+        $this-> Employee = $emp;
     }
 
 	/**
@@ -16,8 +16,8 @@ class maintenancecontroller extends \BaseController {
 	 */
 	public function index()
 	{
-        $vols = $this->volunteer->all();
-        return View::make('pages.maintenance',['vols' => $vols]);
+        $emps = $this->Employee->all();
+        return View::make('pages.maintenance',['emps' => $emps]);
 	}
 
 
@@ -29,7 +29,7 @@ class maintenancecontroller extends \BaseController {
 	public function create($keyword)
 	{
         return View::make(pages.results)
-            ->with('results',Volunteer::search($keyword));
+            ->with('results',Employee::search($keyword));
 	}
 
 
@@ -57,8 +57,8 @@ class maintenancecontroller extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$vol = $this->volunteer->find($id);
-        return View::make('pages.volunteer', ['vol' => $vol]);
+		$emp = $this->Employee->find($id);
+        return View::make('pages.volunteer', ['emp' => $emp]);
 	}
 
 

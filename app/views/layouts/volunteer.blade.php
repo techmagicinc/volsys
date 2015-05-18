@@ -45,10 +45,6 @@
                                 <li class="divider"></li>
                                 <li><a href="#">One more separated link</a></li> -->
                             </ul>
-                        </li>
-                    </ul>
-
-
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>

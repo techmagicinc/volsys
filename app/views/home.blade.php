@@ -2,7 +2,7 @@
 
 @section('body')
 
-{{ HTML::link('Logout','logout')}}
+{{ HTML::link('logout','logout')}}
 <br>
 {{ HTML::link('edit','maintenance')}}
 <br>
